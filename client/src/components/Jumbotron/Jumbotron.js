@@ -1,9 +1,16 @@
 import React from "react";
 import "./Jumbotron.css";
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  font-size: 3.5em;
+  text-align: center;
+  color: palevioletred;
+`;
 
 const Jumbotron = () => (
   <div className="jumbotron text-center">
-    <h1>React Recipes</h1>
+    <Title>React Recipes</Title>
     <a
       target="_blank"
       rel="noopener noreferrer"
