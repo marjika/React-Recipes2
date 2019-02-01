@@ -1,0 +1,14 @@
+.container {
+    min-height: 100%;
+    height: auto;
+    /* Negative indent footer by its height */
+    margin: 0 auto -60px;
+    /* Pad bottom by footer height */
+    padding: 0 0 60px;
+}
+
+html, .div-body {
+    height: 100%;
+    padding:0;
+    margin: 0;
+}

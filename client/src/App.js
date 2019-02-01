@@ -1,11 +1,24 @@
 import React, { Component } from "react";
 import Jumbotron from "./components/Jumbotron";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import Input from "./components/Input";
 import Button from "./components/Button";
 import API from "./utils/API";
 import { RecipeList, RecipeListItem } from "./components/RecipeList";
 import { Container, Row, Col } from "./components/Grid";
+import styled from "styled-components";
+import "./App.css";
+
+
+const Empty = styled.h1`
+  font-size: 3.5em;
+  text-align: center;
+  color: #016699;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  padding-top: 20px;
+`;
 
 class App extends Component {
   state = {
@@ -32,7 +45,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="div-body">
         <Nav />
         <Jumbotron />
         <Container>
@@ -63,10 +76,10 @@ class App extends Component {
               </form>
             </Col>
           </Row>
-          <Row>
-            <Col size="xs-12">
+          <Row style={{ textAlign: "center" }}>
+            <Col size="md-12">
               {!this.state.recipes.length ? (
-                <h1 className="text-center">No Recipes to Display</h1>
+                <Empty>No Recipes to Display</Empty>
               ) : (
                 <RecipeList>
                   {this.state.recipes.map(recipe => {
@@ -85,6 +98,8 @@ class App extends Component {
             </Col>
           </Row>
         </Container>
+        <div id="push"></div>
+        <Footer />
       </div>
     );
   }
