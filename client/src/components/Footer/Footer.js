@@ -10,12 +10,15 @@ const StickyNavbar = styled.nav`
   font-weight: bold;
   width: 100%;
   bottom: 0;
+  position: fixed;
+  font-size: 11px;
+  padding-top: 30px;
 `;
 
 const Footer = () => (
   <StickyNavbar className="navbar navbar-default navbar-fixed-bottom">
-    <div className="container">
-        <p className="navbar-text pull-left">NAVBAR</p>
+    <div className="container" style={{ textAlign:"center" }}>
+        <p>React styling practice by <a href="https://marjika.github.io/Portfolio/">Marjika</a></p>
     </div>
     {/* <a className="navbar-brand" href="/">
       React Recipes

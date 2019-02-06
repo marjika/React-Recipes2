@@ -8,7 +8,7 @@ export const RecipeListItem = props => (
     <Container>
       <Row>
         <Col size="xs-4 sm-2">
-          <Thumbnail src={props.thumbnail || "https://placehold.it/300x300"} />
+          <Thumbnail src={props.thumbnail || "http://placeimg.com/300/300/nature"} />
         </Col>
         <Col size="xs-8 sm-9">
           <h3>{props.title}</h3>

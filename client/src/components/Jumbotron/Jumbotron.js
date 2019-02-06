@@ -12,7 +12,7 @@ const Title = styled.h1`
 
 const Jumbotron = () => (
   <div className="jumbotron text-center">
-    <Title>React Recipes</Title>
+    <Title>React Recipes <i class="fa fa-cutlery" aria-hidden="true"></i></Title>
     <a
       target="_blank"
       rel="noopener noreferrer"
